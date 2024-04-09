@@ -13,15 +13,16 @@ const Login = () => {
     const password = useRef(null)
 
     const HandleButtonClick = () => {
-        // validate
-        const message = validateInputs(email.value, password.value)
-        setErrorMessage(message)
+        // validate         
+        const message = validateInputs(email.current.value, password.current.value)
+        console.log(message)
+        setErrorMessage(message);
         if (message) return
 
-        if (!isSignUpForm){
+        if (!isSignUpForm) {
 
-        }else{
-            
+        } else {
+
         }
     }
 
@@ -35,6 +36,7 @@ const Login = () => {
                         {toggle && <input type='text' placeholder='Full Name' className='p-2 ml-10 mb-5 w-[80%] rounded-md bg-gray-600 text-white' />}
                         <input type='email' ref={email} placeholder='Email Address' className='p-2 ml-10 w-[80%] rounded-md bg-gray-600 text-white' />
                         <input type='password' ref={password} placeholder='Password' className='p-2 ml-10  mt-5 w-[80%] rounded-md bg-gray-600 text-white' />
+                        <p className="text-red-500 font-bold text-lg px-10 py-2">{errorMessage}</p>
                     </form>
                     <Button onClick={HandleButtonClick} style={{ marginTop: '20px', width: '80%', marginLeft: '40px' }} variant='contained' color='error'>{toggle ? 'Sign Up' : 'Login'}</Button>
                     <div style={{ cursor: 'pointer' }} className=' flex p-10' onClick={(prev) => setToggle((prev) => !prev)}>

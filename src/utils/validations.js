@@ -3,7 +3,7 @@ export const validateInputs = (email, passwrord) => {
     email
   );
   const isPasswordValid =
-    /^(?=.*\d) (?=.*[a-z])(?= .*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(passwrord);
+    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(passwrord);
 
   if (!isEmailValid) return "Email Id is not valid";
   if (!isPasswordValid) return "Password is not valid";
