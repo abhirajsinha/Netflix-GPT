@@ -1,11 +1,13 @@
 import React from "react";
+import { Provider } from "react-redux";
 import Body from "./components/Body";
+import appStore from "./utils/appStore";
 
 const App = () => {
   return (
-    <div style={{height:'100vh', width:'100vw'}}>
+    <Provider store={appStore} style={{ height: "100%", width: "100vw" }}>
       <Body />
-    </div>
+    </Provider>
   );
 };
 
