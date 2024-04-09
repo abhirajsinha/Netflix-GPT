@@ -8,7 +8,7 @@ const Body = () => {
     const appRouter = createBrowserRouter([
         {
             path: '/',
-            element: <Login />            
+            element: <Login />
         }, {
             path: '/browse',
             element: <Browse />
@@ -16,7 +16,9 @@ const Body = () => {
     ])
     return (
         <>
-            <RouterProvider router={appRouter} />
+            <div style={{height:'100%', width:'100%'}}>
+                <RouterProvider router={appRouter} />
+            </div>
         </>
     )
 }

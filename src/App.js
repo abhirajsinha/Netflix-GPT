@@ -3,7 +3,7 @@ import Body from "./components/Body";
 
 const App = () => {
   return (
-    <div>
+    <div style={{height:'100vh', width:'100vw'}}>
       <Body />
     </div>
   );
